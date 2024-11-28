@@ -9,3 +9,9 @@ class Product:
     def treatPrice(self, price) -> None:
         price = re.sub(r'[^\d,]', '', price)
         self.price = float(re.sub(r',', '.', price))
+
+    def serializeProd(self):
+        return{
+            "name" : self.name,
+            "price" : self.price
+        }
